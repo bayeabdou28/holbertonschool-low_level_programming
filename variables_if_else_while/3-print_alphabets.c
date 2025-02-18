@@ -2,7 +2,7 @@
 
 /**
  * main - Entry point
- * Description: Prints the alphabet in lowercase, then uppercase, followed by a new line
+*Description: Prints the alphabetinlowercase,thenuppercase,followedbyanewline
  * Return: Always 0 (Success)
  */
 int main(void)
