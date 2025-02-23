@@ -1,8 +1,10 @@
 /**
- * _isalpha - Vérifie si un caractère est alphabétique
- * @c: Le caractère à vérifier
+ * _isalpha - Checks for alphabetic character
+ * @c: The character to check
  *
- * Return: 1 si c est une lettre (minuscule ou majuscule), 0 sinon
+ * Return: 1 if c is a letter (lowercase or uppercase), 0 otherwise
  */
 int _isalpha(int c)
-{return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')); }
+{
+    return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
+}
