@@ -1,7 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-int _putchar(char c); /* Déclaration de la fonction _putchar */
-int _abs(int);
+int print_last_digit(int);
+int _putchar(char c);
 
 #endif /* MAIN_H */
