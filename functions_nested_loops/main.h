@@ -2,6 +2,6 @@
 #define MAIN_H
 
 int _putchar(char c);
-void print_alphabet(void);  // Ajoute bien cette ligne
+void print_alphabet(void);  /* Ajoute bien cette ligne */
 
 #endif /* MAIN_H */
