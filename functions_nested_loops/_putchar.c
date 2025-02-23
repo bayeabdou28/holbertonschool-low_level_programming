@@ -7,4 +7,6 @@
  * Return: 1 on success, -1 on error
  */
 int _putchar(char c)
-{return (write(1, &c, 1));  /* Utilisation correcte de write */}
+{
+    return (write(1, &c, 1));  /* Utilisation correcte de write */
+}
