@@ -1,9 +1,14 @@
+/**
+ * _isdigit - Checks if a character is a digit (0 through 9)
+ * @c: The character to be checked
+ *
+ * Return: 1 if c is a digit, 0 otherwise
+ */
 #include "main.h"
-#include <stdio.h>
 
-int main(void)
+int _isupper(int c)
 {
-char c1 = 'A';
-printf("%c: %d\n", c1, _isupper(c1)); /* Doit afficher A: 1 */
-/* ... reste du code ... */
-return (0); }
+return (c >= 'A' && c <= 'Z');
+}
+
+/* Autres fonctions si nécessaire */
