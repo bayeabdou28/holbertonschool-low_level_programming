@@ -16,5 +16,5 @@ while (s[length] != '\0')
 length++; /* Incrémentation du compteur */
 }
 
-return length; /* Retourne la longueur */
-} 
+return (length) ; /* Retourne la longueur */
+}
