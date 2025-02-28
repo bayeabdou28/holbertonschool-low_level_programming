@@ -7,11 +7,13 @@
  *
  * Cette fonction échange les valeurs pointées par a et b.
  */
-#include "main.h"
 
 /* Fonction qui échange les valeurs de deux entiers */
 void swap_int(int *a, int *b)
-{int temp = *a;
+{
+int temp;
+
+temp = *a;
 *a = *b;
 *b = temp;
 }
