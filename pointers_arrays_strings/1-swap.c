@@ -6,7 +6,7 @@
  * @b: Pointeur vers le deuxième entier
  *
  * Cette fonction échange les valeurs pointées par a et b.
- */ 
+ */
 #include "main.h"
 
 /* Fonction qui échange les valeurs de deux entiers */
