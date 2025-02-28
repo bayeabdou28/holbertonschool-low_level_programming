@@ -8,5 +8,5 @@ while (s[length] != '\0')
 length++; /* Incrémenter le compteur pour chaque caractère */
 }
 
-return (length; /* Retourner la longueur de la chaîne */)
+return length; /* Retourner la longueur de la chaîne *
 }
