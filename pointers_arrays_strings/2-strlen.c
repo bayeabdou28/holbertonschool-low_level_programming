@@ -8,13 +8,13 @@
  */
 int _strlen(char *s) /* Déclaration correcte */
 {
-    int length = 0; /* Initialisation du compteur */
+int length = 0; /* Initialisation du compteur */
 
-    /* Boucle pour parcourir la chaîne */
-    while (s[length] != '\0')
-    {
-        length++; /* Incrémentation du compteur */
-    }
+/* Boucle pour parcourir la chaîne */
+while (s[length] != '\0')
+{
+length++; /* Incrémentation du compteur */
+}
 
-    return length; /* Retourne la longueur */
+return length; /* Retourne la longueur */
 } 
