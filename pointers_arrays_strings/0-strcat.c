@@ -6,7 +6,7 @@
  * Return: A pointer to the resulting string dest
  */
 char *_strcat(char *dest, char *src)
-{
+i{
 char *original_dest = dest;
 
 /* Move to the end of dest string */
@@ -24,4 +24,4 @@ src++;
 /* Add terminating null byte */
 *dest = '\0';
 
-return original_dest; }
+return (original_dest); }
