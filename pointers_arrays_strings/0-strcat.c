@@ -6,22 +6,21 @@
  * Return: A pointer to the resulting string dest
  */
 char *_strcat(char *dest, char *src)
-i{
-char *original_dest = dest;
+{
+int i, j;
 
-/* Move to the end of dest string */
-while (*dest != '\0')
-dest++;
+/* Find the end of dest string */
+for (i = 0; dest[i] != '\0'; i++)
+;
 
 /* Copy characters from src to dest */
-while (*src != '\0')
+for (j = 0; src[j] != '\0'; j++)
 {
-*dest = *src;
-dest++;
-src++;
+dest[i + j] = src[j];
 }
 
 /* Add terminating null byte */
-*dest = '\0';
+dest[i + j] = '\0';
 
-return (original_dest); }
+return (dest);
+}
