@@ -1,13 +1,11 @@
 #include "main.h"
 
-/**
- * _puts - Affiche une chaîne de caractères suivie d'une nouvelle ligne
- * @str: Pointeur vers la chaîne à afficher
- */
-void _puts(chatrwhile (*str)
+void _puts(char *str)
 {
-_putchar(*str);  // Utilisation de _putchar pour afficher chaque caractère
+while (*str != '\0')
+{
+_putchar(*str);
 str++;
 }
-_putchar('\n');  // Ajout du saut de ligne
+_putchar('\n');
 }
