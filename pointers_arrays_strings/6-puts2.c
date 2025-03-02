@@ -6,12 +6,13 @@
  */
 void puts2(char *str)
 {
-int i = 0;
+    int i = 0;
 
-while (str[i] != '\0') // Parcours de la chaîne
-{
-_putchar(str[i]);  // Affiche le caractère actuel
-i += 2;            // Passe au caractère suivant en sautant un
+    while (str[i] != '\0') /* Parcours de la chaîne */
+    {
+        _putchar(str[i]);  /* Affiche le caractère actuel */
+        i += 2;            /* Passe au caractère suivant en sautant un */
+    }
+    _putchar('\n');        /* Ajout du saut de ligne */
 }
-_putchar('\n');        // Ajout du saut de ligne
-}
+
