@@ -1,13 +1,11 @@
 #include <unistd.h>
 
 /**
- * _putchar - Affiche un caractère dans la sortie standard
+ * _putchar - Affiche un caractère à la sortie standard
  * @c: Le caractère à afficher
- *
  * Return: 1 en cas de succès, -1 en cas d'erreur
  */
 int _putchar(char c)
 {
-    return write(1, &c, 1);
+    return (write(1, &c, 1));
 }
-
