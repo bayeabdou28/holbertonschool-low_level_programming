@@ -1,7 +1,6 @@
-#include "main.h"
-
 int main(void)
 {
-_puts("Hello, world!");
-return (0);
+    // Code principal ici
+    return 0;
 }
+
