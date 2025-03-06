@@ -1,12 +1,34 @@
-#include <unistd.h>
+#include "main.h"
 
 /**
- * _putchar - Affiche un caractère sur la sortie standard
- * @c: Le caractère à afficher
- * Return: 1 en cas de succès, -1 en cas d'erreur
- */
-int _putchar(char c)
+* main - Point d'entrée pour tester _strchr
+*
+* Return: Toujours 0 (succès)
+*/
+int main(void)
 {
-    return (write(1, &c, 1));
+char *s = "hello";
+char *f;
+
+f = _strchr(s, 'l');
+if (f != NULL)
+{
+while (*f)
+{
+_putchar(*f);
+f++;
 }
+_putchar('\n');
+}
+else
+{
+_putchar('N');
+_putchar('U');
+_putchar('L');
+_putchar('L');
+_putchar('\n');
+}
+return (0);
+}
+
 
