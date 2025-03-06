@@ -15,5 +15,4 @@ while (n > 0) {
 p++;
 n--;
 }
-return (s);
-}
+return (s); }
