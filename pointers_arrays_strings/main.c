@@ -1,22 +1,22 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
-
-main - check the code
-
-Return: Always 0.
-*/
+ * main - Entry point to test _strstr function.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
-char *s = "hello";
-char *f;
+char *s = "hello, world";
+char *f = "world";
+char *t;
 
-f = _strchr(s, 'l');
+t = _strstr(s, f);
 
-if (f != NULL)
-{
-printf("%s\n", f);
-}
+if (t)
+_puts(t); /* Utilise _puts pour afficher la sous-chaîne trouvée */
+else
+_puts("Not found");
+
 return (0);
 }

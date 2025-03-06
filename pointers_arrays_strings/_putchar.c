@@ -1,34 +1,17 @@
 #include "main.h"
 
 /**
-* main - Point d'entrée pour tester _strchr
-*
-* Return: Toujours 0 (succès)
-*/
-int main(void)
-{
-char *s = "hello";
-char *f;
+ * _puts - Prints a string, followed by a new line.
+ * @str: The string to print.
+ */
 
-f = _strchr(s, 'l');
-if (f != NULL)
+void _puts(char *str)
 {
-while (*f)
+while (*str)
 {
-_putchar(*f);
-f++;
+_putchar(*str);
+str++;
 }
 _putchar('\n');
 }
-else
-{
-_putchar('N');
-_putchar('U');
-_putchar('L');
-_putchar('L');
-_putchar('\n');
-}
-return (0);
-}
-
 
