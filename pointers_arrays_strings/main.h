@@ -1,9 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-void puts2(char *str);
-int _putchar(char c);
-void puts_half(char *str);
-void print_array(int *a, int n);
+char *_memcpy(char *dest, char *src, unsigned int n);
 
 #endif /* MAIN_H */
