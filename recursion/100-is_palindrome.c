@@ -41,7 +41,7 @@ return (check_palindrome(s, start + 1, end - 1)); /* Vérifie les caractères su
 int is_palindrome(char *s)
 {
 int length = _strlen(s); /* Calcul de la longueur de la chaîne */
-if (length == 0) /* Si la chaîne est vide, c'est un palindrome *
-return(1);
+if (length == 0) /* Si la chaîne est vide, c'est un palindrome */
+return (1);
 return (check_palindrome(s, 0, length - 1)); /* Appel récursif pour vérifier les caractères */
 }
