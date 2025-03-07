@@ -5,32 +5,33 @@
  * @haystack: The main string to search in.
  * @needle: The substring to find.
  *
- * Return: Pointer to the beginning of the located substring, or NULL if not found.
+ * Return: Pointer to the beginning of the located substring,
+ *         or NULL if the substring is not found.
  */
-
 char *_strstr(char *haystack, char *needle)
 {
-char *h, *n;
+    int i, j;
 
-if (*needle == '\0') /* Si needle est vide, retourne haystack */
-return (haystack);
+    /* Si needle est une chaîne vide, retourne haystack */
+    if (*needle == '\0')
+        return (haystack);
 
-while (*haystack)
-{
-h = haystack;
-n = needle;
+    /* Parcours chaque caractère de haystack */
+    for (i = 0; haystack[i] != '\0'; i++)
+    {
+        /* Compare chaque caractère de needle avec ceux de haystack */
+        for (j = 0; needle[j] != '\0'; j++)
+        {
+            /* Si les caractères ne correspondent pas, on quitte la boucle */
+            if (haystack[i + j] != needle[j])
+                break;
+        }
 
-while (*h && *n && (*h == *n)) /* Vérifie si les caractères correspondent */
-{
-h++;
-n++;
-}
+        /* Si toute la chaîne needle a été trouvée */
+        if (needle[j] == '\0')
+            return (haystack + i);
+    }
 
-if (*n == '\0') /* Si on a atteint la fin de needle, on a trouvé la sous-chaîne */
-return (haystack);
-
-haystack++;
-}
-
-return (NULL); /* Si la sous-chaîne n'est pas trouvée */
+    /* Si needle n'a pas été trouvée, retourne NULL */
+    return (NULL);
 }
