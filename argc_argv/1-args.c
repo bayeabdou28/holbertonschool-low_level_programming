@@ -1,8 +1,16 @@
 #include <stdio.h>
 
+/**
+ * main - Prints the number of arguments passed into it
+ * @argc: Number of arguments
+ * @argv: Array of strings (arguments)
+ *
+ * Return: Always 0
+ */
 int main(int argc, char *argv[])
 {
-    /* Le nombre d'arguments est argc, mais on soustrait 1 pour ne pas compter le programme lui-même */
-    printf("%d\n", argc - 1);
+    /* On affiche simplement argc, qui contient le nombre d'arguments */
+    printf("%d\n", argc - 1); /* Soustraire 1 pour ne pas compter le programme lui-même */
     return 0;
 }
+
