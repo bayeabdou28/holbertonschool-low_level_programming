@@ -6,17 +6,16 @@
  */
 void print_chessboard(char (*a)[8])
 {
-    int i, j;
+int i, j;
 
-    /* Parcours chaque ligne de l'échiquier */
-    for (i = 0; i < 8; i++)
-    {
-        /* Parcours chaque colonne de la ligne */
-        for (j = 0; j < 8; j++)
-        {
-            _putchar(a[i][j]);  /* Affiche chaque caractère de l'échiquier */
-        }
-        _putchar('\n');  /* Nouvelle ligne après chaque ligne de l'échiquier */
-    }
+/* Parcours chaque ligne de l'échiquier */
+for (i = 0; i < 8; i++)
+{
+/* Parcours chaque colonne de la ligne */
+for (j = 0; j < 8; j++)
+{
+_putchar(a[i][j]);  /* Affiche chaque caractère de l'échiquier */
 }
-
+_putchar('\n');  /* Nouvelle ligne après chaque ligne de l'échiquier */
+}
+}
