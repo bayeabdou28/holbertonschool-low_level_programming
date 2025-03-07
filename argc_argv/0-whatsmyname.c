@@ -2,7 +2,7 @@
 
 int main(int argc, char *argv[])
 {
-/* Imprime le nom du programme avec le chemin complet */
-printf("%s\n", argv[0]);
-return 0;
+    /* Imprime le nom du programme avec le chemin complet */
+    printf("%s\n", argv[0]);
+    return 0;
 }
