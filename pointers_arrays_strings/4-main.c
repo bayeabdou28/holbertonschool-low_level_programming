@@ -1,15 +1,22 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * main - check the code
+ * main - Test the _strstr function
  *
  * Return: Always 0.
  */
 int main(void)
 {
-    char *str;
+    char *haystack = "hello, world";
+    char *needle = "world";
+    char *result;
 
-    str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
-    print_rev(str);
+    result = _strstr(haystack, needle);
+    if (result != NULL)
+        printf("Found substring: %s\n", result);
+    else
+        printf("Substring not found\n");
+
     return (0);
 }
