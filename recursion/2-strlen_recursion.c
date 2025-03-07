@@ -8,11 +8,10 @@
  */
 int _strlen_recursion(char *s)
 {
-    if (*s == '\0') /* Base case: if we reach the end of the string */
-    {
-        return (0);
-    }
-
-    return (1 + _strlen_recursion(s + 1)); /* Add 1 and call function recursively */
+if (*s == '\0') /* Base case: if we reach the end of the string */
+{
+return (0);
 }
 
+return (1 + _strlen_recursion(s + 1)); /* Add 1 and call function recursively */
+}
