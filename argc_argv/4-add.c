@@ -10,15 +10,15 @@
  */
 int is_number(char *str)
 {
-    int i = 0;
+int i = 0;
 
-    while (str[i])
-    {
-        if (!isdigit(str[i])) /* Vérifie si chaque caractère est un chiffre */
-            return (0);
-        i++;
-    }
-    return (1);
+while (str[i])
+{
+if (!isdigit(str[i])) /* Vérifie si chaque caractère est un chiffre */
+return (0);
+i++;
+}
+return (1);
 }
 
 /**
@@ -30,27 +30,25 @@ int is_number(char *str)
  */
 int main(int argc, char *argv[])
 {
-    int sum = 0, i, num;
+int sum = 0, i, num;
 
-    if (argc == 1) /* Aucun nombre fourni */
-    {
-        printf("0\n");
-        return (0);
-    }
-
-    for (i = 1; i < argc; i++)
-    {
-        if (!is_number(argv[i])) /* Vérifie si l'argument est un nombre */
-        {
-            printf("Error\n");
-            return (1);
-        }
-
-        num = atoi(argv[i]); /* Convertit la chaîne en entier */
-        sum += num;
-    }
-
-    printf("%d\n", sum); /* Affiche la somme */
-    return (0);
+if (argc == 1) /* Aucun nombre fourni */
+{
+printf("0\n");
+return (0);
 }
 
+for (i = 1; i < argc; i++)
+{
+if (!is_number(argv[i])) /* Vérifie si l'argument est un nombre */
+{
+printf("Error\n");
+return (1); }
+
+num = atoi(argv[i]); /* Convertit la chaîne en entier */
+sum += num;
+}
+
+printf("%d\n", sum); /* Affiche la somme */
+return (0);
+}
