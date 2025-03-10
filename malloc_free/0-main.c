@@ -6,10 +6,11 @@ char *create_array(unsigned int size, char c);
 int main(void)
 {
     char *array;
-    unsigned int size = 5;
-    char c = 'H';
+    unsigned int size = 10; /* Taille du tableau */
+    char c = 'X';           /* Caractère d'initialisation */
     unsigned int i;
 
+    /* Appel de la fonction create_array */
     array = create_array(size, c);
     if (array == NULL)
     {
@@ -17,11 +18,13 @@ int main(void)
         return 1;
     }
 
-    /* Affichage du tableau */
+    /* Affichage des éléments du tableau */
     for (i = 0; i < size; i++)
         printf("%c ", array[i]);
     printf("\n");
 
-    free(array); /* Libération de la mémoire */
+    /* Libération de la mémoire allouée */
+    free(array);
+
     return 0;
 }
