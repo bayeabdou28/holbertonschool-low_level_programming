@@ -1,33 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"  /* Inclure le fichier d'en-tête */
+
+char *create_array(unsigned int size, char c);
 
 int main(void)
 {
-    char *buffer;
     unsigned int size = 10;
-    char c = 'H';
+    char c = 'A';
+    char *array;
+    unsigned int i;
 
-    /* Appelle la fonction create_array */
-    buffer = create_array(size, c);
-
-    /* Vérifie si l'allocation a échoué */
-    if (buffer == NULL)
+    array = create_array(size, c);
+    if (array == NULL)
     {
-        printf("Échec de l'allocation de mémoire\n");
-        return (1);
+        printf("Failed to create array.\n");
+        return 1;
     }
 
-    /* Affiche le contenu du tableau */
-    for (unsigned int i = 0; i < size; i++)
+    for (i = 0; i < size; i++)
     {
-        printf("%c", buffer[i]);
+        printf("%c ", array[i]); /* Should print 'A' 10 times */
     }
     printf("\n");
 
-    /* Libère la mémoire */
-    free(buffer);
-
-    return (0);
+    free(array); /* Free the allocated memory */
+    return 0;
 }
-
