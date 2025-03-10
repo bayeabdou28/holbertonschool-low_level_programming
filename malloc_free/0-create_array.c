@@ -1,29 +1,25 @@
-#include <stdlib.h> /* Pour malloc */
-
-/*
- * create_array - Crée un tableau de caractères et l'initialise avec un caractère spécifique.
- * @size: Taille du tableau à créer.
- * @c: Caractère utilisé pour l'initialisation.
- *
- * Return: Pointeur vers le tableau alloué, NULL si size = 0 ou si l'allocation échoue.
- */
+#include <stdlib.h>
+/**
+* create_array - Creates an array of chars and
+* initializes it with a specific char
+* @size: The size of the array to create
+* @c: The character to initialize the array with
+* Description: Allocates memory for an array of size chars,
+* initializes each element
+* with char c. Returns NULL if size is 0 or if malloc fails.
+*
+* Return: Pointer to the array, or NULL if size is 0 or malloc fails
+*/
 char *create_array(unsigned int size, char c)
 {
-    char *array;
-    unsigned int i;
-
-    /* Gestion du cas où size = 0 */
-    if (size == 0)
-        return NULL;
-
-    /* Allocation mémoire */
-    array = (char *)malloc(size * sizeof(char));
-    if (array == NULL) /* Vérification de l'échec de malloc */
-        return NULL;
-
-    /* Initialisation du tableau */
-    for (i = 0; i < size; i++)
-        array[i] = c;
-
-    return array;
+char *array;
+unsigned int i;
+if (size == 0)
+return (0);
+array = malloc(size * sizeof(char));
+if (array == NULL)
+return (0);
+for (i = 0; i < size; i++)
+array[i] = c;
+return (array);
 }
