@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * main - Test the str_concat function.
+ * main - check the code
  *
  * Return: Always 0.
  */
@@ -11,16 +11,13 @@ int main(void)
 {
     char *s;
 
-    s = str_concat("Hello, ", "world!");
+    s = str_concat("Best ", "School");
     if (s == NULL)
     {
-        printf("Memory allocation failed\n");
+        printf("failed\n");
         return (1);
     }
-
-    printf("%s\n", s); /* Expected output: Hello, world! */
+    printf("%s\n", s);
     free(s);
-
     return (0);
 }
-
