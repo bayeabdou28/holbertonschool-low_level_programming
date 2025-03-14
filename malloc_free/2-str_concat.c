@@ -16,14 +16,13 @@ int len1 = 0, len2 = 0, i, j;
 if (s1 != NULL)
 {
 while (s1[len1] != '\0')
-    len1++;
+len1++;
 }
 if (s2 != NULL)
 {
 while (s2[len2] != '\0')
-    len2++;
+len2++;
 }
-
 /* Allocate memory for concatenated string (+1 for null terminator) */
 concat = malloc(sizeof(char) * (len1 + len2 + 1));
 if (concat == NULL)

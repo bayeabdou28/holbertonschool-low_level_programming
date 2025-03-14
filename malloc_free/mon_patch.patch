@@ -1,0 +1,61 @@
+diff --git a/malloc_free/2-main.c b/malloc_free/2-main.c
+index e565a4a..302cc22 100644
+--- a/malloc_free/2-main.c
++++ b/malloc_free/2-main.c
+@@ -3,21 +3,21 @@
+ #include <stdlib.h>
+ 
+ /**
+- * main - check the code
+- *
+- * Return: Always 0.
+- */
++* main - check the code
++*
++* Return: Always 0.
++*/
+ int main(void)
+ {
+-    char *s;
++char *s;
+ 
+-    s = str_concat("Best ", "School");
+-    if (s == NULL)
+-    {
+-        printf("failed\n");
+-        return (1);
+-    }
+-    printf("%s\n", s);
+-    free(s);
+-    return (0);
++s = str_concat("Best ", "School");
++if (s == NULL)
++{
++printf("failed\n");
++return (1);
++}
++printf("%s\n", s);
++free(s);
++return (0);
+ }
+diff --git a/malloc_free/2-str_concat.c b/malloc_free/2-str_concat.c
+index 8e300db..50c6918 100644
+--- a/malloc_free/2-str_concat.c
++++ b/malloc_free/2-str_concat.c
+@@ -16,14 +16,13 @@ int len1 = 0, len2 = 0, i, j;
+ if (s1 != NULL)
+ {
+ while (s1[len1] != '\0')
+-    len1++;
++len1++;
+ }
+ if (s2 != NULL)
+ {
+ while (s2[len2] != '\0')
+-    len2++;
++len2++;
+ }
+-
+ /* Allocate memory for concatenated string (+1 for null terminator) */
+ concat = malloc(sizeof(char) * (len1 + len2 + 1));
+ if (concat == NULL)
