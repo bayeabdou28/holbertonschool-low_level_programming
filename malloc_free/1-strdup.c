@@ -2,24 +2,31 @@
 #include <string.h>
 
 /**
-* _strdup - Duplique une chaîne dans une nouvelle zone mémoire
-* @str: Chaîne à copier
+* _strdup - Returns a pointer to a new string which is a duplicate of str
+* @str: The string to duplicate
 *
-* Return: Pointeur vers la nouvelle chaîne, NULL si échec
+* Return: Pointer to the duplicated string, or NULL if memory allocation fails
 */
 char *_strdup(char *str)
 {
-char *duplicate;
-unsigned int length;
+char *dup;
+int len, i;
 
 if (str == NULL)
 return (NULL);
 
-length = strlen(str) + 1;
-duplicate = malloc(length *sizeof(char));
+len = 0;
+while (str[len] != '\0')
+len++;
 
-if (duplicate == NULL)
+dup = malloc(sizeof(char) * (len + 1));  /* Allocate memory */
+if (dup == NULL)
 return (NULL);
 
-strcpy(duplicate, str);
-return (duplicate); }
+for (i = 0; i < len; i++)  /* Copy characters */
+dup[i] = str[i];
+dup[len] = '\0';  /* Null-terminate the new string */
+
+return (dup);
+}
+
