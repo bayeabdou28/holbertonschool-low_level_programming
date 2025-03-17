@@ -1,0 +1,8 @@
+#include "dog.h"  // Inclusion obligatoire
+
+int main(void) {
+struct dog my_dog;
+init_dog(&my_dog, "Bobby", 3.5, "Alice");
+return 0;
+}
+
