@@ -1,6 +1,9 @@
 #ifndef DOG_H
 #define DOG_H
 
+#include <stddef.h> /* Pour NULL */
+#include <stdio.h>  /* Pour printf */
+
 /**
 * struct dog - Structure définissant un chien
 * @name: Nom du chien
@@ -14,8 +17,9 @@ float age;
 char *owner;
 };
 
-/* Prototype de la fonction init_dog */
+/* Prototypes des fonctions */
 void init_dog(struct dog *d, char *name, float age, char *owner);
+void print_dog(struct dog *d);
 
 #endif /* DOG_H */
 
