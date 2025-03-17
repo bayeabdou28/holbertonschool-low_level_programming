@@ -2,17 +2,15 @@
 
 int main(void)
 {
-struct dog my_dog = {"Rex", 5.5, "Alice"};
-struct dog my_dog2 = {NULL, 3.0, NULL};
+dog_t my_dog;
 
-printf("=== Affichage du premier chien ===\n");
-print_dog(&my_dog);
+my_dog.name = "Rex";
+my_dog.age = 5.5;
+my_dog.owner = "Alice";
 
-printf("\n=== Affichage du deuxième chien (avec NULL) ===\n");
-print_dog(&my_dog2);
-
-printf("\n=== Affichage d'un chien NULL ===\n");
-print_dog(NULL);
+printf("Nom: %s\n", my_dog.name);
+printf("Âge: %.1f\n", my_dog.age);
+printf("Propriétaire: %s\n", my_dog.owner);
 
 return (0);
 }

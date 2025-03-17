@@ -17,6 +17,9 @@ float age;
 char *owner;
 };
 
+/* Nouveau type dog_t qui remplace struct dog */
+typedef struct dog dog_t;
+
 /* Prototypes des fonctions */
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
