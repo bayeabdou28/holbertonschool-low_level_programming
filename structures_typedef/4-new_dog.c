@@ -1,77 +1,78 @@
-#include "dog.h"
 #include <stdlib.h>
+#include "dog.h"
 
 /**
-* my_strlen - Calcule la longueur d'une chaîne de caractères.
-* @s: La chaîne à mesurer.
-*
-* Return: La longueur de la chaîne.
-*/
-int my_strlen(char *s)
+ * _strlen - Calcule la longueur d'une chaîne
+ * @s: La chaîne à mesurer
+ *
+ * Return: La longueur de la chaîne
+ */
+int _strlen(char *s)
 {
-int len = 0;
+	int len = 0;
 
-while (s && s[len])
-len++;
-
-return (len);
+	while (s[len])
+		len++;
+	return (len);
 }
 
 /**
-* my_strcpy - Copie une chaîne de caractères dans un nouvel espace mémoire.
-* @src: La chaîne source.
-*
-* Return: Un pointeur vers la copie de la chaîne, ou NULL si l'allocation échoue.
-*/
-char *my_strcpy(char *src)
+ * _strcpy - Copie une chaîne
+ * @dest: La destination
+ * @src: La source
+ *
+ * Return: Le pointeur vers dest
+ */
+char *_strcpy(char *dest, char *src)
 {
-int len = my_strlen(src);
-char *dest = malloc(len + 1);
-int i;
+	int i = 0;
 
-if (!dest)
-return (NULL);
-
-for (i = 0; i < len; i++)
-dest[i] = src[i];
-
-dest[i] = '\0';  /* Ajout du caractère nul */
-return (dest);
+	while (src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
 
 /**
-* new_dog - Crée un nouveau chien et alloue dynamiquement de la mémoire.
-* @name: Nom du chien.
-* @age: Âge du chien.
-* @owner: Propriétaire du chien.
-*
-* Return: Pointeur vers le nouveau chien, ou NULL si l'allocation échoue.
-*/
+ * new_dog - Crée un nouveau chien
+ * @name: Le nom du chien
+ * @age: L'âge du chien
+ * @owner: Le propriétaire du chien
+ *
+ * Return: Pointeur vers le nouveau chien, ou NULL si échec
+ */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-dog_t *dog;
+	dog_t *dog;
+	int len1, len2;
 
-/* Allouer de la mémoire pour la structure */
-dog = malloc(sizeof(dog_t));
-if (!dog)
-return (NULL);
+	len1 = _strlen(name);
+	len2 = _strlen(owner);
 
-/* Copier name et owner en utilisant my_strcpy */
-dog->name = my_strcpy(name);
-dog->owner = my_strcpy(owner);
+	dog = malloc(sizeof(dog_t));
+	if (dog == NULL)
+		return (NULL);
 
-/* Vérifier si les allocations ont réussi */
-if (!dog->name || !dog->owner)
-{
-free(dog->name);
-free(dog->owner);
-free(dog);
-return (NULL);
-}
+	dog->name = malloc(sizeof(char) * (len1 + 1));
+	if (dog->name == NULL)
+	{
+		free(dog);
+		return (NULL);
+	}
+	dog->owner = malloc(sizeof(char) * (len2 + 1));
+	if (dog->owner == NULL)
+	{
+		free(dog->name);
+		free(dog);
+		return (NULL);
+	}
+	_strcpy(dog->name, name);
+	_strcpy(dog->owner, owner);
+	dog->age = age;
 
-/* Assigner l'âge */
-dog->age = age;
-
-return (dog);
+	return (dog);
 }
 
